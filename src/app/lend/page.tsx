@@ -33,7 +33,7 @@ function SupplyBorrowTableRow({ index, item, btnName, btnOnClick }) {
   );
 }
 
-export default function LendingSupplyPage() {
+export default function LendingPage() {
   const [supplySelected, setSupplySelected] = useState(true);
 
   const tableData = [
