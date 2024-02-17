@@ -26,8 +26,18 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.btn-gradient {
+  background: linear-gradient(273.64deg, #001F55 -8.32%, #0EC3CD 46.61%, #23DF81 115.25%);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .header-btn {
+    @apply flex items-center capitalize text-lg font-semibold p-2 px-3.5 rounded  transition duration-300 hover:bg-slate-800
   }
 }
