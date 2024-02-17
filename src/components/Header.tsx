@@ -20,7 +20,7 @@ function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center mt-8 px-4 sm:px-12">
+    <header className="flex justify-between items-center mt-8 mx-8 sm:px-12">
       {/* Logo and left buttons */}
       <div className="flex items-center space-x-4">
         <Image src="/logo.png" width={36} height={32} alt="logo" />
