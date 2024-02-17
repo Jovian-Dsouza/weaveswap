@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        kavoon: ["var(--font-kavoon)"],
+      },
+      colors: {
+        lightGreen: "#23DF81",
+        tealGreen: "#11C9BF",
+        darkBlue: "#001F55",
+        darkGray: "#969696",
+        lightGray: "#323232",
       },
     },
   },
