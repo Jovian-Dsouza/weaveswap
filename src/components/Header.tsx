@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const buttonLinks = [
+  { name: "home", href: "/" },
   { name: "swap", href: "/swap" },
   { name: "pool", href: "/pool" },
   { name: "lend", href: "/lend" },
-  { name: "social media", href: "/social_media" },
 ];
 
 function Header() {
