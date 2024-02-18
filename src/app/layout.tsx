@@ -5,6 +5,7 @@ import { Khand } from "next/font/google";
 
 import "./globals.css";
 import Header from "@/components/Header";
+import Provider from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const kavoon = Kavoon({
@@ -12,7 +13,7 @@ const kavoon = Kavoon({
   style: ["normal"],
   subsets: ["latin"],
   display: "swap",
-  variable: '--font-kavoon'
+  variable: "--font-kavoon",
 });
 const khand = Khand({
   weight: ["400", "500", "600"],
@@ -34,8 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${kavoon.variable} ${khand.className}`}>
-        <Header />
-        <main>{children}</main>
+        <Provider>
+          <Header />
+          <main>{children}</main>
+        </Provider>
       </body>
     </html>
   );
