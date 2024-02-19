@@ -3,9 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import "@particle-network/connect-react-ui/dist/index.css";
 import { ConnectButton } from "@particle-network/connect-react-ui";
-import { Avalanche, AvalancheTestnet } from "@particle-network/chains";
+import { WalletEntryPosition } from '@particle-network/auth';
+import {
+    Avalanche,
+    Ethereum,
+    EthereumGoerli,
+    KCCTestnet,
+    Moonbeam,
+    Moonriver,
+    Optimism,
+    PlatON,
+    Polygon,
+    Solana,
+} from '@particle-network/chains';
+import { evmWallets, solanaWallets } from '@particle-network/connect';
+import { ModalProvider } from '@particle-network/connect-react-ui';
+import '@particle-network/connect-react-ui/esm/index.css';
+
 
 const buttonLinks = [
   { name: "home", href: "/" },
@@ -56,43 +71,9 @@ function Header() {
         ))}
       </div>
 
-      {/* <ConnectButton /> */}
-      <ConnectButton.Custom>
-        {({
-          account,
-          chain,
-          openAccountModal,
-          openConnectModal,
+          <ConnectButton />
 
-          openChainModal,
-          accountLoading,
-        }) => {
-          if (chain?.name != AvalancheTestnet.name) {
-            return (
-              <Button onClick={openChainModal} pathname={pathname}>
-                Switch Network
-              </Button>
-            );
-          }
-          if (account) {
-            return (
-              <Button onClick={() => {}} pathname={pathname}>
-                {account.substring(0, 10)}...
-              </Button>
-            );
-          }
-          return (
-            <Button onClick={openConnectModal} pathname={pathname}>
-              Connect Wallet
-            </Button>
-          );
-        }}
-      </ConnectButton.Custom>
 
-      {/* Hamburger menu */}
-      {/* <div className="block sm:hidden">
-        <div onClick={toggleMenu}>H</div>
-      </div> */}
     </header>
   );
 }

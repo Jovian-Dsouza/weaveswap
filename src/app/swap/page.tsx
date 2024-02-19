@@ -22,7 +22,7 @@ function TokenSelectorBox({showMaxBtn}){
                   src="/dropdown.svg"
                   width={8.41}
                   height={5.36}
-                  alt="icon"
+                  alt="icon"hmm
                 />
               </div>
             </div>
