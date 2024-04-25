@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { ConnectButton } from "@particle-network/connect-react-ui";
+// import { ConnectButton } from "@particle-network/connect-react-ui";
 import { WalletEntryPosition } from '@particle-network/auth';
 import {
     Avalanche,
@@ -20,6 +20,7 @@ import {
 import { evmWallets, solanaWallets } from '@particle-network/connect';
 import { ModalProvider } from '@particle-network/connect-react-ui';
 import '@particle-network/connect-react-ui/esm/index.css';
+import { ConnectButton } from "./ConnectButton";
 
 
 const buttonLinks = [
@@ -71,7 +72,7 @@ function Header() {
         ))}
       </div>
 
-          <ConnectButton />
+          <ConnectButton className='' />
 
 
     </header>
